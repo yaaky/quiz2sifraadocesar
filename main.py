@@ -1,4 +1,4 @@
-from quiz2sifraadocesar.cifradoCesar import Juego
+from cifradoCesar import Juego
 
 def mostrar_menu_principal():
     print("\nSISTEMA DE ENCRIPTACION")
@@ -14,15 +14,15 @@ def iniciar_sistema():
     while activo:
         mostrar_menu_principal()
         seleccion = input("Selecciona una opción: ")
-    if seleccion == "1":
-        Cifrador.encriptar_mensaje()
-    elif seleccion == "2":
-        Cifrador.desencriptar_mensaje()
-    elif seleccion == "3":
-        Cifrador.cerrar_sesion()
-        activo = False
-    else:
-        print("Opción no válida. Intenta de nuevo")
+        if seleccion == "1":
+            Cifrador.encriptar_mensaje()
+        elif seleccion == "2":
+            Cifrador.desencriptar_mensaje()
+        elif seleccion == "3":
+            Cifrador.cerrar_sesion()
+            activo = False
+        else:
+            print("Opción no válida. Intenta de nuevo")
 
 if __name__ == "__main__":
     iniciar_sistema()
